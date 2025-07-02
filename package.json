@@ -1,0 +1,26 @@
+{
+    "name": "shri2025-performancetask",
+    "version": "1.0.0",
+    "description": "Оптимизировать страницу, выложить результат на Github-Pages и отправить его на проверку на [https://shri-performance.ru/](https://shri-performance.ru/), отправив адрес вашей страницы. Нужно набрать минимум **80 баллов**. Набрать больше баллов возможно, но больше 120 в зачёт не пойдёт.",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "babel app.jsx --out-file app.compiled.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/galagrin/shri2025-performancetask.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/galagrin/shri2025-performancetask/issues"
+    },
+    "homepage": "https://github.com/galagrin/shri2025-performancetask#readme",
+    "devDependencies": {
+        "@babel/cli": "^7.27.2",
+        "@babel/core": "^7.27.7",
+        "@babel/preset-react": "^7.27.1"
+    }
+}

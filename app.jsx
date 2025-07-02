@@ -382,12 +382,10 @@ function Main() {
     );
 }
 
-setTimeout(() => {
-    const root = ReactDOM.createRoot(document.getElementById("app"));
-    root.render(
-        <>
-            <Header />
-            <Main />
-        </>
-    );
-}, 100);
+const root = ReactDOM.createRoot(document.getElementById("app"));
+root.render(
+    <>
+        <Header />
+        <Main />
+    </>
+);
