@@ -2,19 +2,11 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
 function Header() {
   let [expanded, setExpanded] = React.useState(false);
   let [toggled, setToggled] = React.useState(false);
-  const toggledRef = React.useRef(false);
-  // const onClick = () => {
-  //     if (!toggled) {
-  //         setToggled(true);
-  //     }
-
-  //     setExpanded(!expanded);
-  // };
   const onClick = () => {
-    if (!toggledRef.current) {
-      toggledRef.current = true;
+    if (!toggled) {
+      setToggled(true);
     }
-    setExpanded(prev => !prev);
+    setExpanded(!expanded);
   };
   return /*#__PURE__*/React.createElement("header", {
     className: "header"
