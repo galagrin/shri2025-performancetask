@@ -288,7 +288,8 @@ body {
         gap: 1.25rem;
         height: auto;
         margin-bottom: 0.3125rem;
-        background-image: url(assets/bg@2x.avif);
+        /* background-image: url(assets/bg@2x.avif); */
+        background: no-repeat 50% 50% url(assets/bg@2x.avif);
     }
 }
 
