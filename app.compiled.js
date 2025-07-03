@@ -54,7 +54,7 @@ function Event(props) {
         height
       });
     }
-  }, []);
+  });
   return /*#__PURE__*/React.createElement("li", {
     ref: ref,
     className: "event" + (props.slim ? " event_slim" : "")
@@ -191,7 +191,7 @@ function Main() {
       initedRef.current = true;
       setActiveTab(new URLSearchParams(location.search).get("tab") || "all");
     }
-  }, []);
+  });
   const onSelectInput = event => {
     setActiveTab(event.target.value);
   };
