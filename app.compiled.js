@@ -2,11 +2,19 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
 function Header() {
   let [expanded, setExpanded] = React.useState(false);
   let [toggled, setToggled] = React.useState(false);
+  const toggledRef = React.useRef(false);
+  // const onClick = () => {
+  //     if (!toggled) {
+  //         setToggled(true);
+  //     }
+
+  //     setExpanded(!expanded);
+  // };
   const onClick = () => {
-    if (!toggled) {
-      setToggled(true);
+    if (!toggledRef.current) {
+      toggledRef.current = true;
     }
-    setExpanded(!expanded);
+    setExpanded(prev => !prev);
   };
   return /*#__PURE__*/React.createElement("header", {
     className: "header"
@@ -54,7 +62,7 @@ function Event(props) {
         height
       });
     }
-  });
+  }, []);
   return /*#__PURE__*/React.createElement("li", {
     ref: ref,
     className: "event" + (props.slim ? " event_slim" : "")
@@ -191,7 +199,7 @@ function Main() {
       initedRef.current = true;
       setActiveTab(new URLSearchParams(location.search).get("tab") || "all");
     }
-  });
+  }, []);
   const onSelectInput = event => {
     setActiveTab(event.target.value);
   };
