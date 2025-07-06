@@ -40,7 +40,7 @@ function Header() {
     href: "/scripts"
   }, "\u0421\u0446\u0435\u043D\u0430\u0440\u0438\u0438"))));
 }
-function Event(props) {
+const Event = React.memo(function Event(props) {
   const ref = React.useRef();
   const {
     onSize
@@ -69,7 +69,7 @@ function Event(props) {
   }, props.title), props.subtitle && /*#__PURE__*/React.createElement("span", {
     className: "event__subtitle"
   }, props.subtitle)));
-}
+});
 const TABS = {
   all: {
     title: "Все",

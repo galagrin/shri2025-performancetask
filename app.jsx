@@ -43,7 +43,7 @@ function Header() {
     );
 }
 
-function Event(props) {
+const Event = React.memo(function Event(props) {
     const ref = React.useRef();
 
     const { onSize } = props;
@@ -69,8 +69,7 @@ function Event(props) {
             </button>
         </li>
     );
-}
-
+});
 const TABS = {
     all: {
         title: "Все",
